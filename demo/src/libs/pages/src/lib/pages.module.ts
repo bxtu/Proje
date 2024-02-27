@@ -1,23 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './main-page/main-page.component';
-import { Proje1Component } from './proje1/proje1.component';
 import { ProjeComponent } from './proje/proje.component';
-import { HeaderComponent } from './main-page/header/header.component';
-import { ContentComponent } from './main-page/content/content.component';
-
-
 
 @NgModule({
   declarations: [
     MainPageComponent,
-    Proje1Component,
-    ProjeComponent,
-    HeaderComponent,
-    ContentComponent
+    ProjeComponent
   ],
   imports: [
     CommonModule
   ]
 })
 export class PagesModule { }
+
+// key ve yazılacak halini excelde yaz örneğin keyNumber diye class oluştururkenki mantıkla yazmış ol.
+// en.json ve de.json şeklinde oluyor örnek olarak key mesela systemTestCase: "Sistem Testi" gibi
