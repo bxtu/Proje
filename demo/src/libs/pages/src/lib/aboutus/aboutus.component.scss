@@ -1,0 +1,44 @@
+.img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 200px;
+    height: 1030px;
+}
+/* about-us.component.css */
+
+.background {
+    position: relative;
+    background-color: navy; /* Lacivert renk */
+    overflow: hidden;
+  }
+  
+  .ellipses {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .ellipse {
+    width: 100%;
+    height: 100px; /* Ayarlayabilirsiniz */
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5); /* Opak beyaz renk */
+    position: absolute;
+  }
+  
+  .ellipse1 { top: 50px; }
+  .ellipse2 { top: 150px; }
+  .ellipse3 { top: 250px; }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Diğer stillendirmeleri ekleyebilirsiniz */
+  
