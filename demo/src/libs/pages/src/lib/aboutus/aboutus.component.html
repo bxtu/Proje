@@ -1,22 +1,15 @@
-<!-- about-us.component.html -->
-
-<div class="background">
-    <div class="ellipses">
-      <div class="ellipse ellipse1"></div>
-      <div class="ellipse ellipse2"></div>
-      <div class="ellipse ellipse3"></div>
-    </div>
-  
-    <div class="content">
-      <div class="logo">
-        <img class="img" src="assets/arkaplan.jpg" alt="Logo">
-      </div>
+<div class="background" style="background-image: url('assets/sky.jpg');">
+  <div class="content">
       <div class="section">
-        <h1 class="title">Hakkımızda</h1>
-        <p class="text">
-          <!-- Your Lorem Ipsum text here -->
-        </p>
+          <div class="logo-section" routerLink="/home" (mouseenter)="stopAnimation()" (mouseleave)="startAnimation()">
+              <img src="assets/logo.png" alt="Logo" class="logo">
+          </div>
+          <div class="text-section">
+              <h1 class="title">Hakkımızda</h1>
+              <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel laoreet ex, sit amet malesuada neque. Nulla laoreet accumsan mauris quis malesuada. Nullam volutpat enim velit, quis laoreet mauris mollis id. Nunc luctus orci in nibh venenatis dictum. Aliquam at magna id neque viverra blandit ac at ante. Sed sed quam lectus. Nunc facilisis libero elit, eget iaculis nulla malesuada eu. Duis eu commodo mi. Nullam hendrerit fringilla nunc, id dictum justo congue sit amet. Nulla placerat vel sem nec venenatis. Pellentesque tempor diam et nulla sollicitudin, non rutrum felis iaculis. 
+              </p>
+          </div>
       </div>
-    </div>
   </div>
-  
+</div>

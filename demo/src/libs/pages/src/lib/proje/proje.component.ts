@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./proje.component.scss']
 })
 export class ProjeComponent {
+  private animationStopped: boolean = false;
 
+  stopAnimation() {
+    this.animationStopped = true;
+  }
+
+  startAnimation() {
+    this.animationStopped = false;
+    this.animateLogo();
+  }
+
+  private animateLogo() {
+    if (!this.animationStopped) {
+      // Your animation logic here
+      requestAnimationFrame(() => this.animateLogo());
+    }
+  }
+
+  
 }

@@ -1,0 +1,92 @@
+
+.background {
+    background-color: navy;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Make the background container a positioned context */
+  }
+  
+  .content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo-section {
+    position: relative; /* Position the logo section relative to the background container */
+    width: 40%;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+  
+    .logo {
+      max-width: 70%;
+      
+      animation: fadeInLogo 2s ease-in-out forwards, slideUpDown 4s ease-in-out infinite;
+    }
+  
+    &:hover {
+      .logo {
+        transform: scale(1.1);
+        animation: none;
+      }
+    }
+  }
+  
+  .text-section {
+    width: 60%;
+    padding: 20px;
+    color: white;
+    opacity: 0;
+    animation: slideInText 2s ease-in-out forwards;
+  }
+  
+  .title {
+    font-size: 2em;
+  }
+  
+  .text {
+    font-size: 1.2em;
+  }
+  
+  
+  
+  @keyframes fadeInLogo {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes slideInText {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
