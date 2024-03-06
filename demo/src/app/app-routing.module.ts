@@ -4,11 +4,13 @@ import { MainPageComponent } from 'src/libs/pages/src/lib/main-page/main-page.co
 import { ProjeComponent } from 'src/libs/pages/src/lib/proje/proje.component';
 import { AboutusComponent } from 'src/libs/pages/src/lib/aboutus/aboutus.component';
 import { MisyonlarComponent } from 'src/libs/pages/src/lib/misyonlar/misyonlar.component';
+import { PaydaslarComponent } from 'src/libs/pages/src/lib/paydaslar/paydaslar.component';
 const routes: Routes = [
   { path: 'home', component: MainPageComponent },
   { path: 'proje', component: ProjeComponent },
   { path: 'aboutus', component: AboutusComponent },
-  { path: 'misyonlar', component: MisyonlarComponent }
+  { path: 'misyonlar', component: MisyonlarComponent },
+  { path: 'paydaslar', component: PaydaslarComponent }
 ];
 
 @NgModule({
