@@ -3,15 +3,23 @@
   top: 0;
   left: 0;
   z-index: 100;
-  width: 95%;
+  width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
+  transition: top 1s ease-in-out; // Animasyon süresi
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+  &.hidden {
+    top: -100%; // Header'ı yukarı kaydırır
+  }
 }
 
 .logo {
+
   position: relative;
   width: 210px;
   height: auto;
@@ -38,7 +46,8 @@
 
 .nav-item {
   margin: 0 20px;
-  font-family:  Barlow, sans-serif;
+  margin-top: 20px;
+  font-family:  Roboto,Helvetica Neue,sans-serif;
   font-size: 18px;
   font-weight: 750;
   color: #fff;
@@ -47,15 +56,16 @@
 }
 
 .nav-item a {
-  color: #fdfdfd;
+  color: rgb(20,21,64);
   text-decoration: none;
 }
 
 .language-selector {
-  color: #fff;
+  color: rgb(20,21,64);
   position: relative;
   display: inline-block;
-  font-family:  Barlow, sans-serif;
+  font-family:  Roboto,Helvetica Neue,sans-serif;
+
 }
 
 .language-dropdown {
@@ -63,7 +73,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background-color: #1900ff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 10px;
@@ -82,4 +92,8 @@
   font-size: 16px;
   padding: 5px;
 }
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 700
+
+
 

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-
+import { CarouselComponent } from 'src/libs/pages/src/lib/main-page/carousel/carousel.component';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from 'src/libs/pages/src/lib/main-page/header/header.component';
 import { MainPageComponent } from 'src/libs/pages/src/lib/main-page/main-page.component';
@@ -20,7 +20,8 @@ import { PagesModule } from 'src/libs/pages/src/public-api';
     HeaderComponent,
     ContentComponent,
     ProjeComponent,
-    AboutusComponent
+    AboutusComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

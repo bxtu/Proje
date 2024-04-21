@@ -1,0 +1,67 @@
+
+.Carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // Dikey hizalamayı merkezle
+  margin-top: 100px; // İstenilen boşluk miktarı Carousel ve p arasında
+  width: 1280px;
+  height: 600px;
+  margin: 130px auto; // Carousel'ı yatayda merkezle
+
+  .carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 15px;
+    width: 1280px;
+    height: 600px;
+  }
+
+  p {
+    display: flex; // İçeriğin yatay olarak hizalanmasını sağlar
+    align-items: center; // İçeriği dikey olarak hizalar
+    margin-top: 20px; // İstenilen boşluk miktarı p ve carousel-container arasında
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; // Font ailesi ve font tipi
+    font-size: 20px; // Font boyutu
+    font-weight: lighter; // Font kalınlığı
+    &::after {
+      content: '';
+      flex: 1;
+      border-top: 2px solid black; // Çizgi rengi ve kalınlığını buradan ayarlayabilirsiniz
+      margin-left: 10px;
+      margin-top: 8px;
+      //// Çizgi rengi ve kalınlığını buradan ayarlayabilirsiniz
+    }
+    
+    
+    
+  }
+}
+
+
+  
+  
+  img {
+    
+    display: block;
+    width: 100%;
+    height:  100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    
+    opacity: 1;
+  }
+  
+  .carousel-container.next-slide img {
+    transform: scale(1.2); /* İlk olarak resmi büyüt */
+    opacity: 1; /* ve tamamen görünür hale getir */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* geçiş efektini ekle */
+  }
+  
+  .carousel-container.prev-slide img {
+    transform: scale(1); /* Resmi tekrar normal boyuta küçült */
+    opacity: 0.6; /* ve opaklığı azalt */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* geçiş efektini ekle */
+  }
+  
