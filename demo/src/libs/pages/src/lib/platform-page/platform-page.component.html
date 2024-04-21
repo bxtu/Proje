@@ -1,0 +1,22 @@
+
+<form class="form" #data="ngForm" (submit)="onSubmit(data)">
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" ngModel name="email" class="form-control" id="email"  placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="Ad">Ad</label>
+      <input type=""  ngModel name="firstName" class="form-control" id="Ad" placeholder="ad">
+      <label for="soyad">Soyad</label>
+      <input  class="form-control"  ngModel name="surName" id="soyad" placeholder="soyad">
+    </div>
+    <div class="form-group">
+      <label for="sehir">şehir</label>
+      <input  class="form-control"  ngModel name="city" id="sehir" placeholder="şehir">
+    </div>
+    <div class="form-group">
+      <label for="meslek">meslek</label>
+      <input  class="form-control" id="meslek"  ngModel name="job" placeholder="meslek">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

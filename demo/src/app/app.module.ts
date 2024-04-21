@@ -9,6 +9,8 @@ import { ContentComponent } from 'src/libs/pages/src/lib/main-page/content/conte
 import { MisyonlarComponent } from 'src/libs/pages/src/lib/misyonlar/misyonlar.component';
 import { ProjeComponent } from 'src/libs/pages/src/lib/proje/proje.component';
 import { AboutusComponent } from 'src/libs/pages/src/lib/aboutus/aboutus.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PagesModule } from 'src/libs/pages/src/public-api';
 @NgModule({
   
     declarations: [
@@ -22,7 +24,10 @@ import { AboutusComponent } from 'src/libs/pages/src/lib/aboutus/aboutus.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PagesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
