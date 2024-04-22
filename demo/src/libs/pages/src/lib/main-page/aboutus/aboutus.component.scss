@@ -1,0 +1,81 @@
+.AboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // Sol tarafta hizala
+  justify-content: center; // Dikey hizalamayı merkezle
+  width: 100%; // Container genişliği
+  margin-top: 20px; // Üstten boşluk
+  position: relative; // Pseudo elementler için pozisyon referansı
+  
+  
+}
+.title{
+  
+    display: flex; // İçeriğin yatay olarak hizalanmasını sağlar
+    align-items: center; // İçeriği dikey olarak hizalar
+    margin-top: 20px; // İstenilen boşluk miktarı p ve carousel-container arasında
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; // Font ailesi ve font tipi
+    font-size: 30px; // Font boyutu
+    font-weight: lighter; // Font kalınlığı
+    
+   p {
+    &::after {
+      content: '';
+      flex: 1;
+      border-top: 2px solid black; // Çizgi rengi ve kalınlığını buradan ayarlayabilirsiniz
+      margin-left: 10px;
+      margin-top: 12px;
+      //// Çizgi rengi ve kalınlığını buradan ayarlayabilirsiniz
+    }
+   }
+  
+}
+.section-container{
+  
+  margin-top: 20px;
+  position: relative;
+
+}
+.section1 {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // Sol tarafta hizala
+  justify-content: center; // Dikey hizalamayı merkezle
+  margin-top: 20px; // Üstten boşluk
+  position: relative; // Pseudo elementler için pozisyon referansı
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.section3 {
+  width: 70%; // Container genişliği
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // Sol tarafta hizala
+  justify-content: center; // Dikey hizalamayı merkezle
+  width: 14%; // Container genişliği
+  margin-top: 20px; // Üstten boşluk
+  position: relative; // Pseudo elementler için pozisyon referansı
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around; /* Butonların arasında boşluk bırakır */
+  margin-top: 20px; /* Üst içeriğe biraz mesafe bırakır */
+}
+
+.rounded-button {
+  background-color: navy; /* Lacivert arka plan rengi */
+  color: white; /* Yazı rengi */
+  border: none; /* Kenar çizgisini kaldırır */
+  padding: 10px 20px; /* İç boşluk */
+  text-align: center; /* Metni ortalar */
+  text-decoration: none; /* Alt çizgiyi kaldırır */
+  display: inline-block; /* Düzenli blok görünümü */
+  font-size: 16px; /* Yazı boyutu */
+  margin: 15px 7px; /* Marjin ayarı */
+  cursor: pointer; /* Fare imlecini işaretçi yapar */
+  border-radius: 20px; /* Yuvarlak köşeler */
+}

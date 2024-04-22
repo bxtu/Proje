@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from 'src/libs/pages/src/lib/main-page/header/header.component';
 import { MainPageComponent } from 'src/libs/pages/src/lib/main-page/main-page.component';
 import { ContentComponent } from 'src/libs/pages/src/lib/main-page/content/content.component';
-import { MisyonlarComponent } from 'src/libs/pages/src/lib/misyonlar/misyonlar.component';
+import { MisyonlarComponent } from 'src/libs/pages/src/lib/main-page/misyonlar/misyonlar.component';
 import { ProjeComponent } from 'src/libs/pages/src/lib/proje/proje.component';
-import { AboutusComponent } from 'src/libs/pages/src/lib/aboutus/aboutus.component';
+import { AboutusComponent } from 'src/libs/pages/src/lib/main-page/aboutus/aboutus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagesModule } from 'src/libs/pages/src/public-api';
+import { PlatformComponent } from 'src/libs/pages/src/lib/main-page/platform/platform.component';
+
 @NgModule({
   
     declarations: [
@@ -21,7 +23,8 @@ import { PagesModule } from 'src/libs/pages/src/public-api';
     ContentComponent,
     ProjeComponent,
     AboutusComponent,
-    CarouselComponent
+    CarouselComponent,
+    PlatformComponent,
   ],
   imports: [
     BrowserModule,

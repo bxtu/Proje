@@ -6,7 +6,7 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent {
-  images: string[] = ['assets/carousel/1.jpg', 'assets/carousel/2.jpg', 'assets/carousel/3.jpg'];
+  images: string[] = ['assets/background1.jpg', 'assets/background2.jpg', 'assets/background3.jpg'];
   currentIndex: number = 0;
   timer: any;
 

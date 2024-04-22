@@ -1,0 +1,45 @@
+.platform-section {
+    background-color: #f1f1f1; // Arka plana hafif gri bir renk verir.
+  
+    .platform-title {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; // Font ailesi ve font tipi
+
+      color: rgb(0, 0, 0);
+      margin-bottom: 10px; // Başlık altındaki mesafeyi ayarlar.
+    }
+  
+    .platform-content {
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); // Gölge efekti ekler.
+      border-radius: 10px; // Köşeleri yuvarlatır.
+      text-align: center;
+  
+      h3 {
+        color: rgb(0, 0, 0);
+        margin-bottom: 10px; // h3 başlığı altındaki mesafeyi ayarlar.
+      }
+  
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px; // Paragraf ile buton arasında boşluk oluşturur.
+      }
+  
+      .signup-button {
+        background-color: navy;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 20px; // Buton köşelerini yuvarlatır.
+        cursor: pointer; // Fare butonun üzerine geldiğinde işaretçiyi değiştirir.
+        transition: background-color 0.3s; // Arka plan renginde geçiş efekti uygular.
+  
+        &:hover {
+          background-color: darken(navy, 10%); // Fare üzerine geldiğinde butonun rengini koyulaştırır.
+        }
+      }
+    }
+  }
+  
