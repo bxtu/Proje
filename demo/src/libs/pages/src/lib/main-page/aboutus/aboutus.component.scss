@@ -1,81 +1,70 @@
-.AboutUs {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; // Sol tarafta hizala
-  justify-content: center; // Dikey hizalamayı merkezle
-  width: 100%; // Container genişliği
-  margin-top: 20px; // Üstten boşluk
-  position: relative; // Pseudo elementler için pozisyon referansı
-  
-  
+.box {
+  width: 600px;
+  height: 500px;
+  background: #f0f0f0;
+  position: absolute;
+  right: -15%;
+  z-index: -1;
 }
-.title{
-  
-    display: flex; // İçeriğin yatay olarak hizalanmasını sağlar
-    align-items: center; // İçeriği dikey olarak hizalar
-    margin-top: 20px; // İstenilen boşluk miktarı p ve carousel-container arasında
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; // Font ailesi ve font tipi
-    font-size: 30px; // Font boyutu
-    font-weight: lighter; // Font kalınlığı
-    
-   p {
-    &::after {
-      content: '';
-      flex: 1;
-      border-top: 2px solid black; // Çizgi rengi ve kalınlığını buradan ayarlayabilirsiniz
-      margin-left: 10px;
-      margin-top: 12px;
-      //// Çizgi rengi ve kalınlığını buradan ayarlayabilirsiniz
-    }
-   }
-  
+
+.heading-4{
+  margin-top: 10px;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  justify-self: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #a8a8a8;
+  font-size: 15px;
 }
-.section-container{
-  
-  margin-top: 20px;
+  .heading-1{
+    grid-row: 2/3;
+    grid-column: 3/7;
+    justify-self: center;
+    font-size: 40px;
+    font-weight: 500;
+  }
+.info-1{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, min-content);
+  grid-row: 4 / -1;
+  grid-column: 1 / -1;
+  grid-gap: 20px;
   position: relative;
+  &__text{
+    grid-row: 1 / -1;
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-rows: repeat(6, min-content);
+    grid-gap: 25px ;
 
-}
-.section1 {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; // Sol tarafta hizala
-  justify-content: center; // Dikey hizalamayı merkezle
-  margin-top: 20px; // Üstten boşluk
-  position: relative; // Pseudo elementler için pozisyon referansı
-  font-weight: bold;
-  font-size: 20px;
-}
+    span.quote{
+      font-size: 120px;
+      transform: translateY(80px);
+    }
 
-.section3 {
-  width: 70%; // Container genişliği
+    .heading-3{
+      grid-row: 2/3;
+      grid-column: 1/-1;
+      font-size: 36px;
+      font-weight: 500;
+    }
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; // Sol tarafta hizala
-  justify-content: center; // Dikey hizalamayı merkezle
-  width: 14%; // Container genişliği
-  margin-top: 20px; // Üstten boşluk
-  position: relative; // Pseudo elementler için pozisyon referansı
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-around; /* Butonların arasında boşluk bırakır */
-  margin-top: 20px; /* Üst içeriğe biraz mesafe bırakır */
-}
-
-.rounded-button {
-  background-color: navy; /* Lacivert arka plan rengi */
-  color: white; /* Yazı rengi */
-  border: none; /* Kenar çizgisini kaldırır */
-  padding: 10px 20px; /* İç boşluk */
-  text-align: center; /* Metni ortalar */
-  text-decoration: none; /* Alt çizgiyi kaldırır */
-  display: inline-block; /* Düzenli blok görünümü */
-  font-size: 16px; /* Yazı boyutu */
-  margin: 15px 7px; /* Marjin ayarı */
-  cursor: pointer; /* Fare imlecini işaretçi yapar */
-  border-radius: 20px; /* Yuvarlak köşeler */
+    p.paragraph {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.7;
+      grid-row: 3/4;
+      width: 75%;
+    }
+  }
+ 
+  &__visual{
+    grid-column: 5/-1;
+    grid-row: 1/ -1;
+    height: 500px;
+    margin-right: 20px;
+    overflow: hidden;
+  }
 }

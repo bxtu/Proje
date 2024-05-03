@@ -2,19 +2,21 @@
 .Carousel {
   display: flex;
   flex-direction: column;
-  justify-content: center; // Dikey hizalamayı merkezle
-  margin-top: 100px; // İstenilen boşluk miktarı Carousel ve p arasında
+  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  height: 70%;
-  margin: 130px auto; // Carousel'ı yatayda merkezle
-
+  height: 100%;
+  margin-bottom: 200px;
   .carousel-container {
+    width: 65%;
+    height: 55%;
+    margin-top: 10px;
+    margin-right: 80%;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
     border-radius: 15px;
+  right: 0%;
     
   }
 
@@ -22,7 +24,7 @@
     display: flex; // İçeriğin yatay olarak hizalanmasını sağlar
     align-items: center; // İçeriği dikey olarak hizalar
     margin-top: 20px; // İstenilen boşluk miktarı p ve carousel-container arasında
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; // Font ailesi ve font tipi
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px; // Font boyutu
     font-weight: lighter; // Font kalınlığı
     &::after {
@@ -43,6 +45,7 @@
   
   
   img {
+  right: 0%;
     
     display: block;
     width: 100%;
@@ -53,14 +56,15 @@
   }
   
   .carousel-container.next-slide img {
-    transform: scale(1.2); /* İlk olarak resmi büyüt */
+    transform: scale(1); /* İlk olarak resmi büyüt */
     opacity: 1; /* ve tamamen görünür hale getir */
     transition: transform 0.5s ease, opacity 0.5s ease; /* geçiş efektini ekle */
   }
   
   .carousel-container.prev-slide img {
     transform: scale(1); /* Resmi tekrar normal boyuta küçült */
-    opacity: 0.6; /* ve opaklığı azalt */
+    opacity: 1; /* ve opaklığı azalt */
     transition: transform 0.5s ease, opacity 0.5s ease; /* geçiş efektini ekle */
   }
+  
   

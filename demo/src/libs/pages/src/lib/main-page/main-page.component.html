@@ -1,5 +1,99 @@
-<app-header></app-header>
-<app-carousel></app-carousel>
-<app-aboutus></app-aboutus>
-<app-misyonlar></app-misyonlar>
-<app-platform></app-platform>
+
+<header class="header">
+    <ul class="menu" #menu>
+      <li class="menu__item">
+        <a class="menu__link" (click)="scrollToSection('second-section')">Hakkımızda</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" (click)="scrollToSection('third-section')">Misyonlar</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" (click)="scrollToSection('fourth-section')">Platform
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link">Paydaşlar</a>
+      </li>
+    </ul>
+    <ul class="menu menu-right" #menuSecond>
+      <li class="menu__item">
+        <a class="menu__link">Sosyal Medya</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link">Dil</a>
+      </li>
+    </ul>
+  </header>
+
+  <div class="heading-container">
+  <h1 class="heading-main">Milli Teknoloji Hamlesi</h1>
+  </div>
+  
+    <app-carousel></app-carousel>
+
+
+<section id="second-section" #secondSection>
+    <div class="box"></div>
+    <h4 class="heading-4" id="about">Hakkımızda</h4>
+    <div class="info-1">
+      <div class="info-1__text">
+        <span class="quote">
+          "
+        </span>
+        <h2 class="heading-3">
+          Şahsen;
+        </h2>
+        <p class="paragraph">
+            Yeni dünya düzeninde teknolojisiyle söz sahibi olmayı amaçlayan, gün geçtikçe daha da önemli hale gelen uzay ekosistemi alanında araştırma ve geliştirme yaparak geleceğin teknoloji çağı mimarı olmaya aday Nevspace Uzay Teknolojileri, %100 yerli kaynak ve milli mühendislikle uzay sektörüne yönelik itki sistemleri, roketler, uçuş kapsülleri ve uydu gibi teknolojilerin üretimi, geliştirilmesi ve test edilmesi amacıyla 16 Ocak 2020 tarihinde İstanbul, Başakşehir'de kurulmuş olup uzay turizm ve madenciliği ile enerjisiz seyahat gibi alanlar üzerine proje ve fikirler geliştirmesi için çeşitli okul, üniversite, özel sektör, düşünce ve araştırma kuruluşlarından katılımcı veya görevli olarak yer alan, çoğunluğunu öğrenci, mühendis ve akademisyenlerin oluşturduğu bir AR&GE firmasıdır. 
+        </p>
+        <a class="btn--learn">Daha Fazlası</a>
+      </div>
+      <div class="info-1__visual">
+        <img src="../assets/bayrak.jpg" alt="">
+      </div>
+    </div>
+</section>
+
+<section id="third-section" #thirdSection>
+  
+  <section class="side-scroll section">
+    <h2 class="side-scroll-heading heading">
+      Misyonlar
+     </h2>
+    <div class="side-scroll-container container">
+     
+      <div class="side-scroll-list-wrapper">
+        <ul class="side-scroll-list">
+          
+          <li class="side-scroll-item">
+            <img src="assets/roket.png">
+            <h2 class="title">Pulsar</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          </li>
+          
+          <li class="side-scroll-item">Card</li>
+          <li class="side-scroll-item">
+            <img src="assets/r1.jpg">
+            <h2 class="title">Quasar</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          </li>
+          <li class="side-scroll-item">Card</li>
+          <li class="side-scroll-item">
+            <img src="assets/a.jpg">
+            <h2 class="title">Pranga</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          </li>
+          <li class="side-scroll-item">Card</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section id="fourth-section">
+    <app-platform></app-platform>
+</section>
+
+<section id="fifth-section">
+</section>
+
