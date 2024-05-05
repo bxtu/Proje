@@ -1,99 +1,54 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
-  transition: top 1s ease-in-out; // Animasyon süresi
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  opacity: 0.7;
-  &.hidden {
-    top: -100%; // Header'ı yukarı kaydırır
-  }
-}
-
-.logo {
-
   position: relative;
-  width: 210px;
-  height: auto;
-}
-
-.logo img {
-  max-width: 100%;
-}
-
-.navigation {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Sol - Orta - Sağ */
   align-items: center;
-  position: absolute;
-  top: 53.25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.nav-item {
-  margin: 0 20px;
-  margin-top: 20px;
-  font-family:  Roboto,Helvetica Neue,sans-serif;
-  font-size: 18px;
-  font-weight: 750;
+  height: 80px;
   color: #fff;
+ 
+}
+
+.menu-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-left img {
+  height: 5vh; /* Logo yüksekliği */
+}
+
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__logo{
+  left: 2px;
+}
+.menu__item {
+  padding: 0 15px;
+}
+
+.menu__link {
   text-decoration: none;
+  color: #fff;
   text-transform: uppercase;
-}
-
-.nav-item a {
-  color: rgb(20,21,64);
-  text-decoration: none;
-}
-
-.language-selector {
-  color: rgb(20,21,64);
-  position: relative;
-  display: inline-block;
-  font-family:  Roboto,Helvetica Neue,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s;
 
 }
 
-.language-dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #1900ff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  padding: 10px;
-  z-index: 1;
+.menu__link:hover {
+  color: #4a4594; /* Hover rengi */
 }
 
-.language-selector:hover .language-dropdown {
-  display: block;
+.menu-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-
-.language-buttons button {
-  margin-right: 10px;
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-size: 16px;
-  padding: 5px;
-}
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 700
-
-
-

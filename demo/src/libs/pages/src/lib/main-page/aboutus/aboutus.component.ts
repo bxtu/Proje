@@ -1,28 +1,26 @@
-import { Component, HostListener, ElementRef, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, ElementRef, Renderer2, AfterViewInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-aboutus',
   templateUrl: './aboutus.component.html',
   styleUrl: './aboutus.component.scss'
 })
-export class AboutusComponent {
+export class AboutusComponent implements AfterViewInit{
   
-  private animationStopped: boolean = false;
+  constructor(@Inject(DOCUMENT) private document: Document) { }
 
-  stopAnimation() {
-    this.animationStopped = true;
-  }
 
-  startAnimation() {
-    this.animationStopped = false;
-    this.animateLogo();
+  ngAfterViewInit(): void {
+    this.initialAnimations();
   }
-
-  private animateLogo() {
-    if (!this.animationStopped) {
-      // Your animation logic here
-      requestAnimationFrame(() => this.animateLogo());
-    }
+  initialAnimations(): void {
+    gsap.from(this.document.querySelector('.heading-main'), {
+      duration: 2,
+      x: '-50%', // Sayfanın yatay ortasına göre konumlandır
+      opacity: 0, // Başlangıçta görünmez
+    });
   }
+  
   }
 

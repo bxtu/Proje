@@ -5,12 +5,14 @@ import { AboutusComponent } from 'src/libs/pages/src/lib/main-page/aboutus/about
 import { MisyonlarComponent } from 'src/libs/pages/src/lib/misyonlar/misyonlar.component';
 import { PaydaslarComponent } from 'src/libs/pages/src/lib/paydaslar/paydaslar.component';
 import { PlatformPageComponent } from 'src/libs/pages/src/lib/platform-page/platform-page.component';
+import { OrganizasyonSemaComponent } from 'src/libs/pages/src/lib/organizasyon-sema/organizasyon-sema.component';
 const routes: Routes = [
   { path: 'home', component: MainPageComponent },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'misyonlar', component: MisyonlarComponent },
   { path: 'paydaslar', component: PaydaslarComponent },
   { path: 'platform', component: PlatformPageComponent },
+  { path: 'organizasyon-sema', component: OrganizasyonSemaComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

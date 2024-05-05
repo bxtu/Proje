@@ -1,69 +1,125 @@
-*{
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-body{
-  
-  margin: 0;
-  height: 100vh;
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: #11161F;
-  color : rgb(23, 11, 133);  
+
+ul,
+li {
+  list-style: none;
 }
 
-.mask{
-  overflow: hidden;
+
+/* 共通 */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  font-family:Arial, Helvetica, sans-serif;
+
 }
 
-.outer{
-  overflow-x: hidden;
+.heading {
+  margin-top: 10px;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  justify-self: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #a8a8a8;
+  font-size: 15px;
+
 }
 
-.slider{
+/* タイトル */
+.title {
+  padding: 200px 0 20px;
+  font-size: 52px;
+  text-align: center;
+}
+
+/* 普通のセクション */
+.normal-text {
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  margin-top: 60px;
+}
+
+/* 横スクロールセクション */
+.side-scroll {
+  background-color: #f1f1f1;
   display: flex;
-  width: 300vw;
+  
 }
 
-section{
-  height: 100vh;
+.side-scroll-heading {
+  margin-top: 10px;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  justify-self: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #a8a8a8;
+  font-size: 15px;
+}
+
+.side-scroll-list-wrapper {
+  position: relative;
+  margin-top: 50px;
   width: 100%;
+  height: 700px;
+  justify-self: center;
+}
+
+.side-scroll-list {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: flex;
+  gap: 0 60px;
+}
+
+.side-scroll-item {
   
-  .inner{
-    margin: 7em;
-    position: relative;
-    display: flex;
-    height: calc(100% - 14em);
-    align-items: flex-end;
+  
+  display: flex;
+  width: 800px;
+  height: 720px;
+  background-color: #000000;
+  color: #1b1717;
+  font-size: 32px;
+  font-weight: 700;
+  img {
+    width: 100%; // Resim genişliği kartın genişliği kadar olacak
+    height: 100%; // Yükseklik otomatik ayarlanacak
+    display: block; // Resmi blok element olarak yerleştirir
   }
-
-  h1{
-    text-transform: uppercase;
+  .title {
     font-size: 27px; // Başlık metin boyutu
-      font-family: Arial, Helvetica, sans-serif;  
-      font-weight: 700;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Başlık gölgesi
-      color: #ffffff;
-  }
+    position: absolute; // Mutlak pozisyon
+    bottom: 35px; // Alt kenardan
+    margin-left: 15px; // Sol kenardan
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Başlık gölgesi
+    color: #ffffff;
+}
+  .description {
+    font-family: Arial, Helvetica, sans-serif;  
+    position: absolute; // Mutlak pozisyon
+    bottom: 15px; // Alt kenardan
+    margin-left: 15px; // Sol kenardan
+    color: #ffffff;
+    font-size: 20px;
+    width: 12%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Açıklama gölgesi
+}
+// Ekranın solundaysa veya sağındaysa içeri doğru dönme efekti uygula
 
-  img{
-    position: absolute;
-    width: 80%;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-  }
+}
 
-  .content{
-    justify-self: flex-end;
-    z-index: 15;
-    p{
-      width: 50%;
-      font-family: Arial, Helvetica, sans-serif;  
-      color: #ffffff;
-      font-size: 20px;
-      line-height: 1.5;
-      font-weight: 300;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Açıklama gölgesi
 
-    }
-  }
+.side-scroll-item + .side-scroll-item {
+  margin-left: 60px;
 }

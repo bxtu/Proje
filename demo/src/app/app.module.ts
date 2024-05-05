@@ -10,8 +10,8 @@ import { MisyonlarComponent } from 'src/libs/pages/src/lib/misyonlar/misyonlar.c
 import { AboutusComponent } from 'src/libs/pages/src/lib/main-page/aboutus/aboutus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagesModule } from 'src/libs/pages/src/public-api';
-import { PlatformComponent } from 'src/libs/pages/src/lib/main-page/platform/platform.component';
 import { PaydaslarComponent } from 'src/libs/pages/src/lib/paydaslar/paydaslar.component';
+import { OrganizasyonSemaComponent } from 'src/libs/pages/src/lib/organizasyon-sema/organizasyon-sema.component';
 @NgModule({
   
     declarations: [
@@ -22,8 +22,8 @@ import { PaydaslarComponent } from 'src/libs/pages/src/lib/paydaslar/paydaslar.c
     ContentComponent,
     AboutusComponent,
     CarouselComponent,
-    PlatformComponent,
     PaydaslarComponent,
+    OrganizasyonSemaComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,24 +6,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 @Component({
   selector: 'app-root',
-  //templateUrl: './app.component.html',
-  template: `
-    <app-header></app-header>
-    <router-outlet></router-outlet>
-    
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
 
-  title = 'demo';
-  ngOnInit() {
-    ScrollTrigger.create({
-      trigger: '.header',
-      start: 'top top',
-      end: 'bottom top',
-      pin: true,
-      pinSpacing: false
-    });
-  }
+  
 }

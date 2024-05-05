@@ -1,11 +1,79 @@
 // header.component.ts
-import { Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
+import { gsap } from 'gsap';
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterViewInit{
   
+  @ViewChild('menu', { static: true })
+  menu!: ElementRef<HTMLDivElement>;  
+
+  @ViewChild('header', { static: true })
+  header!: ElementRef<HTMLDivElement>;  
+  constructor( private el: ElementRef) { }
+
+  scrollToSection(sectionId: string) {
+    const element = this.el.nativeElement.querySelector(`#${sectionId}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+
+
+  lastScrollTop = 0; // Son scroll pozisyonunu tutacak değişken
+
+  ngAfterViewInit(): void {
+    this.initialAnimations();
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Scroll yönü ve header'ın görünürlüğüne göre işlem yap
+    if (currentScrollTop > this.lastScrollTop) {
+      // Aşağı doğru scroll yapılıyorsa, header'ı gizle
+      this.hideHeader();
+    } else {
+      // Yukarı doğru scroll yapılıyorsa veya sayfa en üstteyse, header'ı göster
+      this.showHeader();
+    }
+
+    // Son scroll pozisyonunu güncelle
+    this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+  }
+
+  private hideHeader() {
+    const headerElement = document.querySelector('header');
+    gsap.to(headerElement, {
+      opacity: 0,
+      duration: 0.5
+    });
+  }
+
+  private showHeader() {
+    const headerElement = document.querySelector('header');
+    gsap.to(headerElement, {
+      opacity: 1,
+      duration: 0.4
+    });
+  }
+  
+  initialAnimations(): void {
+
+    gsap.from(this.menu.nativeElement.childNodes, {
+      duration: 1,
+      y: -20,
+      opacity: 0,
+      stagger: 0.2,
+      delay: 0.5,
+      ease: 'power2.inOut'
+    });
+  }
 }

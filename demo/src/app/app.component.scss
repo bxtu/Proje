@@ -1,4 +1,9 @@
-body {
-    background-color: #000; /* Siyah arka plan rengi */
-    color: #ff0000; /* Beyaz metin rengi (isteğe bağlı, metin rengini değiştirmek isterseniz) */
-}
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    color: white;
+    z-index: 100; /* Diğer içeriklerin üstünde olacak */
+  }

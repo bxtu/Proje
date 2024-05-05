@@ -1,29 +1,31 @@
-<!--
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-<div class="header" >
-    <div class="logo">
-      <a routerLink="/home">
-        <img src="assets/logo2.png" alt="Logo">
+<header class="header" #header>
+  <ul class="menu-left" #menuSecond>
+    <a href="menu__logo" href="/home">
+      <img src="assets/logo.png" >
+    </a>
+  </ul>
+  <ul class="menu" #menu>
+    
+    <li class="menu__item">
+      <a class="menu__link" href="/aboutus">Hakkımızda</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/misyonlar">Misyonlar</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/platform">Platform
       </a>
-    </div>
-    <div class="navigation">
-      <ul class="nav-links">
-        <li class="nav-item"><a routerLink="/aboutus">Hakkımızda</a></li>
-        <li class="nav-item"><a routerLink="/misyonlar">Misyonlar</a></li>
-        <li class="nav-item"><a routerLink="/paydaslar">Paydaşlar</a></li>
-        <li class="nav-item"><a routerLink="/platform">Platform</a></li>
-        <li class="nav-item"><a routerLink="/iletisim">İletişim</a></li>
-      </ul>
-    </div>
-  <div class="language-selector">
-      <span>Select Language ▼</span>
-      <div class="language-dropdown">
-          <button onclick="changeLanguage('en')">English</button>
-          <button onclick="changeLanguage('tr')">Türkçe</button>
-          <button onclick="changeLanguage('ar')">العربية</button>
-      </div>
-  </div>
-</div>
-//-->
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="/paydaslar">Paydaşlar</a>
+    </li>
+  </ul>
+  <ul class="menu menu-right" #menuSecond>
+    <li class="menu__item">
+      <a class="menu__link" href="organizasyon-sema">Sosyal Medya</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link">Dil</a>
+    </li>
+  </ul>
+</header>
