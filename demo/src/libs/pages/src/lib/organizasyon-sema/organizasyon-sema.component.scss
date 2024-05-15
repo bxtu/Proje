@@ -1,13 +1,15 @@
+
 .wrapper {
-  position: relative;
-  width: 80%;
+  display: flex;
+  justify-content: center; /* İçeriği yatay olarak ortala */
+  align-items: center; /* İçeriği dikey olarak ortala */
+  width: 95%;
+  flex-direction: column;
   height: 100vh;
   overflow: hidden;
   perspective: 600px;
-  display: flex;
-  justify-content: center; /* Resmi yatayda ortalamak için */
-  align-items: center; /* Resmi dikeyde ortalamak için */
-  background-color: aqua;
+  background-color: rgb(0,1,47);
+
 }
 
 img {
@@ -17,7 +19,12 @@ img {
 
 /* Alanın dışına çıkan içeriği gizlemek için */
 body {
-  justify-content: center;
-  align-items: center;
+  background-color: rgb(0,1,47);
+
   overflow: hidden;
 }
+
+
+
+
+

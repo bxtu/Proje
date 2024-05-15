@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './paydaslar.component.scss'
 })
 export class PaydaslarComponent {
-
+  
 }

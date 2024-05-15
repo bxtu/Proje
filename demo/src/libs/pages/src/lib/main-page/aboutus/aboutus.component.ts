@@ -1,6 +1,7 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, HostListener, ElementRef, Renderer2, AfterViewInit, Inject } from '@angular/core';
-
+import { Component,  AfterViewInit, } from '@angular/core';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 @Component({
   selector: 'app-aboutus',
   templateUrl: './aboutus.component.html',
@@ -8,18 +9,34 @@ import { Component, HostListener, ElementRef, Renderer2, AfterViewInit, Inject }
 })
 export class AboutusComponent implements AfterViewInit{
   
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  constructor() {}
 
+  initScrollTrigger() {
+    
 
-  ngAfterViewInit(): void {
-    this.initialAnimations();
-  }
-  initialAnimations(): void {
-    gsap.from(this.document.querySelector('.heading-main'), {
-      duration: 2,
-      x: '-50%', // Sayfanın yatay ortasına göre konumlandır
-      opacity: 0, // Başlangıçta görünmez
+    gsap.to('.heading-main', {
+      opacity: 0,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: 'section.one',
+        scrub: true,
+        start: '3% 100%',
+        end: '15% 10%',
+      },
     });
+
+    gsap.to('figure.preview', {
+      scrollTrigger: {
+        toggleClass: 'active',
+        trigger: 'figure.preview',
+        start: '50% 80%',
+        end: '85% 20%',
+      },
+    });
+  }
+
+  ngAfterViewInit() {
+    this.initScrollTrigger();
   }
   
   }
