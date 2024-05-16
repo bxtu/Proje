@@ -6,24 +6,22 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from 'src/libs/pages/src/lib/main-page/header/header.component';
 import { MainPageComponent } from 'src/libs/pages/src/lib/main-page/main-page.component';
 import { ContentComponent } from 'src/libs/pages/src/lib/main-page/content/content.component';
-import { MisyonlarComponent } from 'src/libs/pages/src/lib/misyonlar/misyonlar.component';
 import { AboutusComponent } from 'src/libs/pages/src/lib/main-page/aboutus/aboutus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagesModule } from 'src/libs/pages/src/public-api';
-import { PaydaslarComponent } from 'src/libs/pages/src/lib/paydaslar/paydaslar.component';
+import { OrganizasyonAgacComponent } from 'src/libs/pages/src/lib/organizasyon-agac/organizasyon-agac.component';
 import { OrganizasyonSemaComponent } from 'src/libs/pages/src/lib/organizasyon-sema/organizasyon-sema.component';
 @NgModule({
   
     declarations: [
-    MisyonlarComponent,
     AppComponent,
     MainPageComponent,
     HeaderComponent,
     ContentComponent,
     AboutusComponent,
     CarouselComponent,
-    PaydaslarComponent,
     OrganizasyonSemaComponent,
+    OrganizasyonAgacComponent,
   ],
   imports: [
     BrowserModule,
