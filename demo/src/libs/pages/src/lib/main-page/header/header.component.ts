@@ -10,6 +10,22 @@ import { gsap } from 'gsap';
 })
 export class HeaderComponent implements AfterViewInit{
   
+  isMobileMenuOpen = false;
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const hamburger = document.querySelector('.hamburger');
+
+    if (mobileMenu && hamburger && !mobileMenu.contains(event.target as Node) && !hamburger.contains(event.target as Node)) {
+      this.isMobileMenuOpen = false;
+    }
+  }
+
   @ViewChild('menu', { static: true })
   menu!: ElementRef<HTMLDivElement>;  
 

@@ -1,31 +1,48 @@
 <header class="header" #header>
   <ul class="menu-left" #menuSecond>
-    <a href="menu__logo" href="/home">
-      <img src="assets/logo.png" >
+    <a class="menu__logo" href="/home">
+      <img src="assets/logo.png">
     </a>
   </ul>
   <ul class="menu" #menu>
-    
     <li class="menu__item">
-      <a class="menu__link" href="/aboutus">Hakkımızda</a>
+      <a class="menu__link" routerLink="/aboutus">Hakkımızda</a>
     </li>
     <li class="menu__item">
-      <a class="menu__link" href="/misyonlar">Misyonlar</a>
+      <a class="menu__link" routerLink="/misyonlar">Misyonlar</a>
     </li>
     <li class="menu__item">
-      <a class="menu__link" href="/platform">Platform
-      </a>
+      <a class="menu__link" routerLink="/platform">Platform</a>
     </li>
     <li class="menu__item">
-      <a class="menu__link" >Paydaşlar</a>
+      <a class="menu__link" routerLink="/duyurular">Duyurular</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link">Paydaşlar</a>
     </li>
   </ul>
   <ul class="menu menu-right" #menuSecond>
     <li class="menu__item">
-      <a class="menu__link" >Sosyal Medya</a>
+      <a class="menu__link">Sosyal Medya</a>
     </li>
     <li class="menu__item">
       <a class="menu__link">Dil</a>
     </li>
   </ul>
+  <div class="hamburger" (click)="toggleMobileMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
+<div class="mobile-menu" [class.open]="isMobileMenuOpen">
+  <ul>
+    <li><a routerLink="/aboutus">Hakkımızda</a></li>
+    <li><a routerLink="/misyonlar">Misyonlar</a></li>
+    <li><a routerLink="/platform">Platform</a></li>
+    <li><a routerLink="/duyurular">Duyurular</a></li>
+    <li><a>Paydaşlar</a></li>
+    <li><a>Sosyal Medya</a></li>
+    <li><a>Dil</a></li>
+  </ul>
+</div>

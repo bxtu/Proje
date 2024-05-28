@@ -1,11 +1,11 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-columns: auto 1fr auto; /* Sol - Orta - Sağ */
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   height: 80px;
   color: #fff;
- 
+  padding: 0 20px;
 }
 
 .menu-left {
@@ -14,9 +14,8 @@
 }
 
 .menu-left img {
-  height: 5vh; /* Logo yüksekliği */
+  height: 5vh;
 }
-
 
 .menu {
   display: flex;
@@ -26,9 +25,10 @@
   margin: 0;
 }
 
-.menu__logo{
+.menu__logo {
   left: 2px;
 }
+
 .menu__item {
   padding: 0 15px;
 }
@@ -40,15 +40,82 @@
   font-size: 14px;
   font-weight: bold;
   transition: color 0.3s;
-
 }
 
 .menu__link:hover {
-  color: #4a4594; /* Hover rengi */
+  color: #4a4594;
 }
 
 .menu-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .menu, .menu-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 20px; /* Sağdan biraz boşluk */
+  background-color: #000; /* Siyah arka plan */
+  padding: 10px 20px; /* İç boşluklar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Menü üstte görünsün */
+  border-radius: 5px; /* Köşeleri yuvarlat */
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  margin: 10px 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: #4a4594;
+}
+
+.mobile-menu.open {
+  display: block;
 }
