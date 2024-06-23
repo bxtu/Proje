@@ -1,0 +1,38 @@
+nav {
+    ul {
+      position: fixed;
+      list-style-type: none;
+      top: 40%;
+      background-color: #0d0f70;
+      
+      li {
+        
+        a {
+          display: block;
+          padding: 10px;
+          color: white;
+          text-decoration: none;
+          &:hover {
+            background-color: #849bc5;
+          }
+        }
+      }
+    }
+  }
+  
+  .project-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    h2 {
+      margin-bottom: 10px;
+    }
+    p {
+      color: #333;
+    }
+  }
+  

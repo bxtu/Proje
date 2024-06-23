@@ -1,0 +1,13 @@
+<nav>
+    <ul>
+      <li *ngFor="let project of projects">
+        <a href="javascript:void(0)" (click)="goToProject(project.id)">{{ project.title }}</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div *ngFor="let project of projects" class="project-container" id="project-{{project.id}}">
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.description }}</p>
+  </div>
+  
