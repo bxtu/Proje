@@ -10,6 +10,16 @@ import { gsap } from 'gsap';
 })
 export class HeaderComponent implements AfterViewInit{
   
+  isSubMenuVisible = false;
+
+  showSubMenu() {
+    this.isSubMenuVisible = true;
+  }
+
+  hideSubMenu() {
+    this.isSubMenuVisible = false;
+  }
+
   isMobileMenuOpen = false;
 
   toggleMobileMenu() {

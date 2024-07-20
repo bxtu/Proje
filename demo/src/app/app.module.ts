@@ -10,7 +10,7 @@ import { AboutusComponent } from 'src/libs/pages/src/lib/aboutus/aboutus.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagesModule } from 'src/libs/pages/src/public-api';
 import { OrganizasyonAgacComponent } from 'src/libs/pages/src/lib/organizasyon-agac/organizasyon-agac.component';
-import { OrganizasyonSemaComponent } from 'src/libs/pages/src/lib/organizasyon-sema/organizasyon-sema.component';
+import { OrganizasyonSemaComponent } from 'src/libs/pages/src/lib/aboutus/organizasyon-sema/organizasyon-sema.component';
 import { MissionsComponent } from 'src/libs/pages/src/lib/missions/missions.component';
 @NgModule({
   

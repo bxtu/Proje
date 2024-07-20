@@ -5,11 +5,15 @@
     </a>
   </ul>
   <ul class="menu" #menu>
-    <li class="menu__item">
-      <a class="menu__link" routerLink="/aboutus">Hakkımızda</a>
+    <li class="menu__item" (mouseenter)="showSubMenu()" (mouseleave)="hideSubMenu()">
+      <a class="menu__link" routerLink="">Hakkımızda</a>
+      <ul *ngIf="isSubMenuVisible" class="submenu">
+        <li class="submenu__item"><a class="submenu__link" routerLink="/aboutus">Biz Kimiz</a></li>
+        <li class="submenu__item"><a class="submenu__link" routerLink="/organizasyon-sema">Çalışma Şeması</a></li>
+      </ul>
     </li>
     <li class="menu__item">
-      <a class="menu__link" routerLink="/misyonlar">Misyonlar</a>
+      <a class="menu__link" routerLink="/missions">Misyonlar</a>
     </li>
     <li class="menu__item">
       <a class="menu__link" routerLink="/platform">Platform</a>
