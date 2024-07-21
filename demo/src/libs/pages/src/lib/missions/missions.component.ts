@@ -7,11 +7,14 @@ import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } fro
 })
 export class MissionsComponent {
   projects = [
-    { id: 1, title: 'Proje 1', description: 'Proje 1 Açıklaması' },
-    { id: 2, title: 'Proje 2', description: 'Proje 2 Açıklaması' },
-    { id: 3, title: 'Proje 3', description: 'Proje 3 Açıklaması' },
-    { id: 4, title: 'Proje 4', description: 'Proje 4 Açıklaması' },
-    { id: 5, title: 'Proje 5', description: 'Proje 5 Açıklaması' }
+    { id: 1, title: 'BİTİRİM', description: 'Proje 1 Açıklaması' , background: 'assets/background1.jpg'},
+    { id: 2, title: 'CAELIFERA', description: 'Proje 2 Açıklaması' , background: 'assets/background1.jpg'},
+    { id: 3, title: 'OPERANTE', description: 'Proje 3 Açıklaması' , background: 'assets/background1.jpg'},
+    { id: 4, title: 'PAS', description: 'Proje 4 Açıklaması' , background: 'assets/background1.jpg'},
+    { id: 5, title: 'PRANGA', description: 'Proje 5 Açıklaması' , background: 'assets/background1.jpg'},
+    { id: 6, title: 'PULSAR', description: 'Proje 5 Açıklaması' , background: 'assets/background1.jpg'},
+    { id: 7, title: 'QUASAR', description: 'Proje 5 Açıklaması' , background: 'assets/background1.jpg'},
+    { id: 8, title: 'TOYGAR', description: 'Proje 5 Açıklaması' , background: 'assets/background1.jpg'},
   ];
 
   goToProject(id: number) {

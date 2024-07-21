@@ -1,3 +1,7 @@
+.main{
+  width: 100%;
+  background-color: rgb(0, 1, 47);
+}
 nav {
     ul {
       position: fixed;
@@ -27,7 +31,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: rgb(0, 1, 47);
     h2 {
       margin-bottom: 10px;
     }
@@ -36,3 +40,19 @@ nav {
     }
   }
   
+  .card {
+
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .card-img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .title{
+    position: relative;
+    top: -20%;
+    font-size:60px;
+  }
