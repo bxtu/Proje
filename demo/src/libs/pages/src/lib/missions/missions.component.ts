@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-missions',
@@ -6,6 +7,7 @@ import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } fro
   styleUrl: './missions.component.scss'
 })
 export class MissionsComponent {
+  constructor(private route: ActivatedRoute) {}
   projects = [
     { id: 1, title: 'BİTİRİM', description: 'Proje 1 Açıklaması' , background: 'assets/background1.jpg'},
     { id: 2, title: 'CAELIFERA', description: 'Proje 2 Açıklaması' , background: 'assets/background1.jpg'},
@@ -16,6 +18,14 @@ export class MissionsComponent {
     { id: 7, title: 'QUASAR', description: 'Proje 5 Açıklaması' , background: 'assets/background1.jpg'},
     { id: 8, title: 'TOYGAR', description: 'Proje 5 Açıklaması' , background: 'assets/background1.jpg'},
   ];
+
+  ngAfterViewInit() {
+    this.route.fragment.subscribe(fragment => {
+      if (fragment) {
+        this.goToProject(parseInt(fragment, 10));
+      }
+    });
+  }
 
   goToProject(id: number) {
     console.log('Go to project with id:', id);

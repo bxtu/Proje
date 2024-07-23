@@ -1,35 +1,38 @@
 <div class="main">
-  <nav class="ml-3 ">
-  <ul class="mr-3">
-    <li *ngFor="let project of projects">
-      <a href="javascript:void(0)" (click)="goToProject(project.id)">{{ project.title }}</a>
-    </li>
-  </ul>
-</nav>
+  <div class="container-fluid">
+    <nav class="ml-3">
+      <ul class="mr-3">
+        <li *ngFor="let project of projects">
+          <a href="javascript:void(0)" (click)="goToProject(project.id)">{{
+            project.title
+          }}</a>
+        </li>
+      </ul>
+    </nav>
 
-<div *ngFor="let project of projects" class="project-container" id="project-{{project.id}}">
-  <ng-container *ngTemplateOutlet="page; context: { data: project }"></ng-container>
+    <div
+      *ngFor="let project of projects"
+      class="project-container"
+      id="project-{{ project.id }}"
+    >
+      <ng-container
+        *ngTemplateOutlet="page; context: { data: project }"
+      ></ng-container>
+    </div>
+  </div>
 </div>
 
 <ng-template #page let-data="data">
-  <h1 class="title text-white text-center">{{ data.title }}</h1>
-  <div class="container">
-
 
     <div class="card mb-3 mt-4 bg-transparent border-transparent">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img class="card-img" [src]="data.background" alt="Card image cap">
+      <div class="row ">
+        <div class="col-md-5">
+          <img class="card-img" [src]="data.background" alt="Card image cap" />
         </div>
-        <div class="col-md-8 p-3">
-          <div class="card-body">
-            <p class="card-text text-white">{{ data.description }}</p>
-          </div>
+        <div class="card-header col-md-8 ml-4">
+          <h1 class="title text-white text-center">{{ data.title }}</h1>
+          <p class="card-text text-white ml-4">{{ data.description }}</p>
         </div>
       </div>
     </div>
-  </div>
-  
 </ng-template>
-</div>
-

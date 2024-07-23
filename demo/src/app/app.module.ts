@@ -13,6 +13,7 @@ import { OrganizasyonAgacComponent } from 'src/libs/pages/src/lib/organizasyon-a
 import { OrganizasyonSemaComponent } from 'src/libs/pages/src/lib/aboutus/organizasyon-sema/organizasyon-sema.component';
 import { MissionsComponent } from 'src/libs/pages/src/lib/missions/missions.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { FooterComponent } from "../libs/pages/src/lib/main-page/footer/footer.component";
 @NgModule({
   
     declarations: [
@@ -32,7 +33,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FormsModule,
     ReactiveFormsModule,
     PagesModule,
-  ],
+    FooterComponent
+],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })

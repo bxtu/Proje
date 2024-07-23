@@ -1,4 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { gsap } from 'gsap';
 
 @Component({
@@ -8,7 +9,7 @@ import { gsap } from 'gsap';
 })
 export class ContentComponent {
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef,private router:Router) { }
 
   animateButton() {
     const buttonElement = this.elementRef.nativeElement.querySelector('.animate-button');
@@ -19,6 +20,10 @@ export class ContentComponent {
       duration: 0.5,
       ease: 'back'
     });
+  }
+
+  goToProject(projectId: string) {
+    this.router.navigate(['/missions'], { fragment: projectId });
   }
 
 }

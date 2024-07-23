@@ -1,0 +1,33 @@
+footer {
+    background-color: #0e0f66;
+    color: #fff;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    display: flex;
+    align-items: center; /* İçerikleri dikeyde ortalayın */
+    justify-content: center; /* İçerikleri yatayda ortalayın */
+  }
+  
+  .logo {
+    height: 50px; /* Uygun bir yükseklik belirleyin */
+    margin-right: 20px; /* Yazılardan ayırmak için sağa boşluk ekleyin */
+  }
+  
+
+  
+  .footer-text {
+    text-align: center; /* Yazıların sola hizalanmasını sağlayın */
+
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+        height: 25px; /* Uygun bir yükseklik belirleyin */
+        margin-right: 10px; /* Yazılardan ayırmak için sağa boşluk ekleyin */
+      }
+  }
+  
