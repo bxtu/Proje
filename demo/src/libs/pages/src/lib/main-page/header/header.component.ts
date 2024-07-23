@@ -11,6 +11,13 @@ import { gsap } from 'gsap';
 export class HeaderComponent implements AfterViewInit{
   
   isSubMenuVisible = false;
+  isMobileMenuOpen = false;
+  lastScrollTop = 0;
+
+  @ViewChild('menu', { static: true }) menu!: ElementRef<HTMLDivElement>;
+  @ViewChild('header', { static: true }) header!: ElementRef<HTMLDivElement>;
+
+  constructor(private el: ElementRef) {}
 
   showSubMenu() {
     this.isSubMenuVisible = true;
@@ -20,10 +27,23 @@ export class HeaderComponent implements AfterViewInit{
     this.isSubMenuVisible = false;
   }
 
-  isMobileMenuOpen = false;
-
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    const mobileMenu = document.querySelector('.mobile-menu') as HTMLElement;
+
+    if (this.isMobileMenuOpen) {
+      gsap.to(mobileMenu, {
+        width: '30%',
+        duration: 0.3,
+        ease: 'power2.inOut'
+      });
+    } else {
+      gsap.to(mobileMenu, {
+        width: '0',
+        duration: 0.3,
+        ease: 'power2.inOut'
+      });
+    }
   }
 
   @HostListener('document:click', ['$event'])
@@ -33,45 +53,24 @@ export class HeaderComponent implements AfterViewInit{
 
     if (mobileMenu && hamburger && !mobileMenu.contains(event.target as Node) && !hamburger.contains(event.target as Node)) {
       this.isMobileMenuOpen = false;
+      gsap.to(mobileMenu, {
+        width: '0',
+        duration: 0.3,
+        ease: 'power2.inOut'
+      });
     }
-  }
-
-  @ViewChild('menu', { static: true })
-  menu!: ElementRef<HTMLDivElement>;  
-
-  @ViewChild('header', { static: true })
-  header!: ElementRef<HTMLDivElement>;  
-  constructor( private el: ElementRef) { }
-
-  scrollToSection(sectionId: string) {
-    const element = this.el.nativeElement.querySelector(`#${sectionId}`);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-
-
-  lastScrollTop = 0; // Son scroll pozisyonunu tutacak değişken
-
-  ngAfterViewInit(): void {
-    this.initialAnimations();
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Scroll yönü ve header'ın görünürlüğüne göre işlem yap
     if (currentScrollTop > this.lastScrollTop) {
-      // Aşağı doğru scroll yapılıyorsa, header'ı gizle
       this.hideHeader();
     } else {
-      // Yukarı doğru scroll yapılıyorsa veya sayfa en üstteyse, header'ı göster
       this.showHeader();
     }
 
-    // Son scroll pozisyonunu güncelle
     this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
   }
 
@@ -90,9 +89,12 @@ export class HeaderComponent implements AfterViewInit{
       duration: 0.4
     });
   }
-  
-  initialAnimations(): void {
 
+  ngAfterViewInit(): void {
+    this.initialAnimations();
+  }
+
+  initialAnimations(): void {
     gsap.from(this.menu.nativeElement.childNodes, {
       duration: 1,
       y: -20,

@@ -1,9 +1,9 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 75%;
-    color: white;
-    z-index: 100; /* Diğer içeriklerin üstünde olacak */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 100; /* Diğer içeriklerin üstünde olacak */
   }
