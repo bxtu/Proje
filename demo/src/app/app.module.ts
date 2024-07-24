@@ -15,6 +15,7 @@ import { MissionsComponent } from 'src/libs/pages/src/lib/missions/missions.comp
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FooterComponent } from "../libs/pages/src/lib/main-page/footer/footer.component";
 import { IletisimComponent } from 'src/libs/pages/src/lib/iletisim/iletisim.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   
     declarations: [
@@ -27,6 +28,7 @@ import { IletisimComponent } from 'src/libs/pages/src/lib/iletisim/iletisim.comp
     OrganizasyonSemaComponent,
     OrganizasyonAgacComponent,
     MissionsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ import { IletisimComponent } from 'src/libs/pages/src/lib/iletisim/iletisim.comp
     FormsModule,
     ReactiveFormsModule,
     PagesModule,
-    FooterComponent
+    RouterModule
 ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

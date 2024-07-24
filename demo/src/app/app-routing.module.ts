@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'platform', component: PlatformPageComponent },
   { path: 'organizasyon-sema', component: OrganizasyonSemaComponent },
   { path: 'missions', component: MissionsComponent },
-  { path: 'iletisim', component: IletisimComponent },
+  { path: 'contact', component: IletisimComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
