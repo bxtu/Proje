@@ -5,6 +5,7 @@ import { AboutusComponent } from 'src/libs/pages/src/lib/aboutus/aboutus.compone
 import { PlatformPageComponent } from 'src/libs/pages/src/lib/platform-page/platform-page.component';
 import { OrganizasyonSemaComponent } from 'src/libs/pages/src/lib/aboutus/organizasyon-sema/organizasyon-sema.component';
 import { MissionsComponent } from 'src/libs/pages/src/lib/missions/missions.component';
+import { IletisimComponent } from 'src/libs/pages/src/lib/iletisim/iletisim.component';
 
 const routes: Routes = [
   { path: 'home', component: MainPageComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'platform', component: PlatformPageComponent },
   { path: 'organizasyon-sema', component: OrganizasyonSemaComponent },
   { path: 'missions', component: MissionsComponent },
+  { path: 'iletisim', component: IletisimComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

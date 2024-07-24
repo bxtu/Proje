@@ -14,6 +14,7 @@ import { OrganizasyonSemaComponent } from 'src/libs/pages/src/lib/aboutus/organi
 import { MissionsComponent } from 'src/libs/pages/src/lib/missions/missions.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FooterComponent } from "../libs/pages/src/lib/main-page/footer/footer.component";
+import { IletisimComponent } from 'src/libs/pages/src/lib/iletisim/iletisim.component';
 @NgModule({
   
     declarations: [
