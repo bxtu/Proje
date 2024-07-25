@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'missions', component: MissionsComponent },
   { path: 'iletisim', component: IletisimComponent },
   {path: 'paydaslar', component: PaydaslarComponent},
+  { path: 'contact', component: IletisimComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

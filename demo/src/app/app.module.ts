@@ -16,6 +16,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FooterComponent } from "../libs/pages/src/lib/main-page/footer/footer.component";
 import { IletisimComponent } from 'src/libs/pages/src/lib/iletisim/iletisim.component';
 import { PaydaslarComponent } from 'src/libs/pages/src/lib/paydaslar/paydaslar.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   
     declarations: [
@@ -28,6 +29,7 @@ import { PaydaslarComponent } from 'src/libs/pages/src/lib/paydaslar/paydaslar.c
     OrganizasyonSemaComponent,
     OrganizasyonAgacComponent,
     MissionsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,7 @@ import { PaydaslarComponent } from 'src/libs/pages/src/lib/paydaslar/paydaslar.c
     FormsModule,
     ReactiveFormsModule,
     PagesModule,
-    FooterComponent
+    RouterModule
 ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

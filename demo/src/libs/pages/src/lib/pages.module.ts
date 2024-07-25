@@ -4,11 +4,13 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { PlatformPageComponent } from './platform-page/platform-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './main-page/footer/footer.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 @NgModule({
   declarations: [
-    PlatformPageComponent
+    PlatformPageComponent,
   ],
 
 
@@ -16,7 +18,6 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule,
     HttpClientModule
   ]
 })
