@@ -6,6 +6,7 @@ import { PlatformPageComponent } from 'src/libs/pages/src/lib/platform-page/plat
 import { OrganizasyonSemaComponent } from 'src/libs/pages/src/lib/aboutus/organizasyon-sema/organizasyon-sema.component';
 import { MissionsComponent } from 'src/libs/pages/src/lib/missions/missions.component';
 import { IletisimComponent } from 'src/libs/pages/src/lib/iletisim/iletisim.component';
+import { PaydaslarComponent } from 'src/libs/pages/src/lib/paydaslar/paydaslar.component';
 
 const routes: Routes = [
   { path: 'home', component: MainPageComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'organizasyon-sema', component: OrganizasyonSemaComponent },
   { path: 'missions', component: MissionsComponent },
   { path: 'iletisim', component: IletisimComponent },
+  {path: 'paydaslar', component: PaydaslarComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
